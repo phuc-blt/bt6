@@ -1,0 +1,142 @@
+[2025-01-14T04:07:38.688+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-14T04:07:38.704+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: predict_tomato_images.predict_and_label manual__2025-01-14T04:07:36.691504+00:00 [queued]>
+[2025-01-14T04:07:38.712+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: predict_tomato_images.predict_and_label manual__2025-01-14T04:07:36.691504+00:00 [queued]>
+[2025-01-14T04:07:38.713+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-14T04:07:38.728+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): predict_and_label> on 2025-01-14 04:07:36.691504+00:00
+[2025-01-14T04:07:38.736+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=196) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-14T04:07:38.738+0000] {standard_task_runner.py:72} INFO - Started process 198 to run task
+[2025-01-14T04:07:38.739+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'predict_tomato_images', 'predict_and_label', 'manual__2025-01-14T04:07:36.691504+00:00', '--job-id', '49', '--raw', '--subdir', 'DAGS_FOLDER/craw_check_update.py', '--cfg-path', '/tmp/tmptbltsy9w']
+[2025-01-14T04:07:38.740+0000] {standard_task_runner.py:105} INFO - Job 49: Subtask predict_and_label
+[2025-01-14T04:07:38.786+0000] {task_command.py:467} INFO - Running <TaskInstance: predict_tomato_images.predict_and_label manual__2025-01-14T04:07:36.691504+00:00 [running]> on host b954e1e08ba9
+[2025-01-14T04:07:38.870+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='predict_tomato_images' AIRFLOW_CTX_TASK_ID='predict_and_label' AIRFLOW_CTX_EXECUTION_DATE='2025-01-14T04:07:36.691504+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-14T04:07:36.691504+00:00'
+[2025-01-14T04:07:38.872+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-14T04:07:38.872+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-14T04:07:38.873+0000] {logging_mixin.py:190} INFO - Current task name:predict_and_label state:running start_date:2025-01-14 04:07:38.704877+00:00
+[2025-01-14T04:07:38.873+0000] {logging_mixin.py:190} INFO - Dag name:predict_tomato_images and current dag run status:running
+[2025-01-14T04:07:38.873+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-14T04:07:38.876+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_30.jpg
+[2025-01-14T04:07:38.877+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_16.jpg
+[2025-01-14T04:07:38.878+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_13.jpg
+[2025-01-14T04:07:38.879+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_89.jpg
+[2025-01-14T04:07:38.880+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_43.jpg
+[2025-01-14T04:07:38.881+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_31.png
+[2025-01-14T04:07:38.882+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_27.jpg
+[2025-01-14T04:07:38.883+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_33.jpg
+[2025-01-14T04:07:38.884+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_65.jpg
+[2025-01-14T04:07:38.885+0000] {logging_mixin.py:190} INFO - Label already exists for Image_16.png, skipping.
+[2025-01-14T04:07:38.886+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_32.png
+[2025-01-14T04:07:38.887+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_24.jpg
+[2025-01-14T04:07:38.889+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_74.jpg
+[2025-01-14T04:07:38.891+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_97.jpg
+[2025-01-14T04:07:38.892+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_15.jpg
+[2025-01-14T04:07:38.894+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_93.jpg
+[2025-01-14T04:07:38.895+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_87.jpg
+[2025-01-14T04:07:38.897+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_12.jpg
+[2025-01-14T04:07:38.898+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_99.jpg
+[2025-01-14T04:07:38.900+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_55.jpg
+[2025-01-14T04:07:38.901+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_17.jpg
+[2025-01-14T04:07:38.902+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_67.jpg
+[2025-01-14T04:07:38.904+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_10.jpg
+[2025-01-14T04:07:38.905+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_82.jpg
+[2025-01-14T04:07:38.906+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_57.jpg
+[2025-01-14T04:07:38.907+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_50.jpg
+[2025-01-14T04:07:38.909+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_91.jpg
+[2025-01-14T04:07:38.910+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_73.jpg
+[2025-01-14T04:07:38.911+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_62.jpg
+[2025-01-14T04:07:38.913+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_53.png
+[2025-01-14T04:07:38.914+0000] {logging_mixin.py:190} INFO - Label already exists for Image_32.jpg, skipping.
+[2025-01-14T04:07:38.915+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_78.jpg
+[2025-01-14T04:07:38.916+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_75.jpg
+[2025-01-14T04:07:38.917+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_35.jpg
+[2025-01-14T04:07:38.919+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_69.png
+[2025-01-14T04:07:38.920+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_56.jpg
+[2025-01-14T04:07:38.921+0000] {logging_mixin.py:190} INFO - Label already exists for Image_89.png, skipping.
+[2025-01-14T04:07:38.922+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_23.jpg
+[2025-01-14T04:07:38.924+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_45.jpg
+[2025-01-14T04:07:38.926+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_28.jpg
+[2025-01-14T04:07:38.927+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_85.jpg
+[2025-01-14T04:07:38.928+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_80.jpg
+[2025-01-14T04:07:38.929+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_86.png
+[2025-01-14T04:07:38.931+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_2.png
+[2025-01-14T04:07:38.932+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_29.jpg
+[2025-01-14T04:07:38.933+0000] {logging_mixin.py:190} INFO - Label already exists for Image_31.jpg, skipping.
+[2025-01-14T04:07:38.934+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_88.jpg
+[2025-01-14T04:07:38.935+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_19.jpg
+[2025-01-14T04:07:38.936+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_100.jpg
+[2025-01-14T04:07:38.938+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_25.jpg
+[2025-01-14T04:07:38.939+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_63.jpg
+[2025-01-14T04:07:38.940+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_66.png
+[2025-01-14T04:07:38.941+0000] {logging_mixin.py:190} INFO - Label already exists for Image_100.png, skipping.
+[2025-01-14T04:07:38.942+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_44.jpg
+[2025-01-14T04:07:38.943+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_18.jpg
+[2025-01-14T04:07:38.944+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_58.jpg
+[2025-01-14T04:07:38.946+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_3.png
+[2025-01-14T04:07:38.947+0000] {logging_mixin.py:190} INFO - Label already exists for Image_33.png, skipping.
+[2025-01-14T04:07:38.948+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_94.jpg
+[2025-01-14T04:07:38.949+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_34.jpg
+[2025-01-14T04:07:38.949+0000] {logging_mixin.py:190} INFO - Label already exists for Image_34.png, skipping.
+[2025-01-14T04:07:38.951+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_64.jpg
+[2025-01-14T04:07:38.952+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_81.jpg
+[2025-01-14T04:07:38.954+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_51.jpg
+[2025-01-14T04:07:38.955+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_47.jpg
+[2025-01-14T04:07:38.956+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_54.jpg
+[2025-01-14T04:07:39.155+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_20.jpg
+[2025-01-14T04:07:39.156+0000] {logging_mixin.py:190} INFO - Label already exists for Image_66.jpg, skipping.
+[2025-01-14T04:07:39.157+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_70.jpg
+[2025-01-14T04:07:39.158+0000] {logging_mixin.py:190} INFO - Label already exists for Image_67.png, skipping.
+[2025-01-14T04:07:39.159+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_40.jpg
+[2025-01-14T04:07:39.161+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_84.jpg
+[2025-01-14T04:07:39.163+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_11.jpg
+[2025-01-14T04:07:39.164+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_98.jpg
+[2025-01-14T04:07:39.166+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_9.jpg
+[2025-01-14T04:07:39.167+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_46.jpg
+[2025-01-14T04:07:39.168+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_6.jpg
+[2025-01-14T04:07:39.169+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_95.jpg
+[2025-01-14T04:07:39.171+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_71.jpg
+[2025-01-14T04:07:39.172+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_4.png
+[2025-01-14T04:07:39.173+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_42.jpg
+[2025-01-14T04:07:39.175+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_26.jpg
+[2025-01-14T04:07:39.176+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_72.jpg
+[2025-01-14T04:07:39.177+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_1.jpg
+[2025-01-14T04:07:39.178+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_59.jpg
+[2025-01-14T04:07:39.179+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_76.jpg
+[2025-01-14T04:07:39.180+0000] {logging_mixin.py:190} INFO - Label already exists for Image_86.jpg, skipping.
+[2025-01-14T04:07:39.181+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_8.jpg
+[2025-01-14T04:07:39.183+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_83.jpg
+[2025-01-14T04:07:39.184+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_96.jpg
+[2025-01-14T04:07:39.185+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_41.jpg
+[2025-01-14T04:07:39.186+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_38.jpg
+[2025-01-14T04:07:39.188+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_90.jpg
+[2025-01-14T04:07:39.189+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_14.jpg
+[2025-01-14T04:07:39.190+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_36.jpg
+[2025-01-14T04:07:39.191+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_77.jpg
+[2025-01-14T04:07:39.192+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_92.jpg
+[2025-01-14T04:07:39.194+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_52.jpg
+[2025-01-14T04:07:39.195+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_68.jpg
+[2025-01-14T04:07:39.196+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_7.jpg
+[2025-01-14T04:07:39.197+0000] {logging_mixin.py:190} INFO - Label already exists for Image_52.png, skipping.
+[2025-01-14T04:07:39.198+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_39.jpg
+[2025-01-14T04:07:39.199+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_37.jpg
+[2025-01-14T04:07:39.201+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_79.jpg
+[2025-01-14T04:07:39.202+0000] {logging_mixin.py:190} INFO - Label already exists for Image_53.jpg, skipping.
+[2025-01-14T04:07:39.203+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_48.jpg
+[2025-01-14T04:07:39.205+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_60.jpg
+[2025-01-14T04:07:39.208+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_49.jpg
+[2025-01-14T04:07:39.209+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_22.jpg
+[2025-01-14T04:07:39.210+0000] {logging_mixin.py:190} INFO - Label already exists for Image_18.png, skipping.
+[2025-01-14T04:07:39.211+0000] {logging_mixin.py:190} INFO - Label already exists for Image_69.jpg, skipping.
+[2025-01-14T04:07:39.213+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_21.jpg
+[2025-01-14T04:07:39.215+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_61.jpg
+[2025-01-14T04:07:39.217+0000] {logging_mixin.py:190} INFO - Processed and labeled: Image_5.jpg
+[2025-01-14T04:07:39.218+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-14T04:07:39.234+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-14T04:07:39.234+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=predict_tomato_images, task_id=predict_and_label, run_id=manual__2025-01-14T04:07:36.691504+00:00, execution_date=20250114T040736, start_date=20250114T040738, end_date=20250114T040739
+[2025-01-14T04:07:39.246+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-14T04:07:39.247+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-14T04:07:39.248+0000] {logging_mixin.py:190} INFO - Dag name:predict_tomato_images queued_at:2025-01-14 04:07:36.713524+00:00
+[2025-01-14T04:07:39.248+0000] {logging_mixin.py:190} INFO - Task hostname:b954e1e08ba9 operator:PythonOperator
+[2025-01-14T04:07:39.294+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-14T04:07:39.316+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-14T04:07:39.318+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

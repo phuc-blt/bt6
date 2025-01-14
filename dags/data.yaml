@@ -1,0 +1,6 @@
+
+train: /opt/airflow/data/train # Sử dụng thư mục data_pool để huấn luyện
+val: /opt/airflow/data/valid
+nc: 1  # Số lượng lớp (classes) - ví dụ 1 lớp nếu bạn chỉ phát hiện cà chua
+names:
+  0: 'tomato'  # Tên lớp của cà chua

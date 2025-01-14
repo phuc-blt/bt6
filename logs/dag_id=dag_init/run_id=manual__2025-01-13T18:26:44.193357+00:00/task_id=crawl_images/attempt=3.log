@@ -1,0 +1,117 @@
+[2025-01-13T18:40:39.725+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-13T18:40:39.753+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: dag_init.crawl_images manual__2025-01-13T18:26:44.193357+00:00 [queued]>
+[2025-01-13T18:40:39.764+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: dag_init.crawl_images manual__2025-01-13T18:26:44.193357+00:00 [queued]>
+[2025-01-13T18:40:39.764+0000] {taskinstance.py:2866} INFO - Starting attempt 3 of 4
+[2025-01-13T18:40:39.782+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): crawl_images> on 2025-01-13 18:26:44.193357+00:00
+[2025-01-13T18:40:39.797+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=145) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-13T18:40:39.799+0000] {standard_task_runner.py:72} INFO - Started process 147 to run task
+[2025-01-13T18:40:39.801+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'dag_init', 'crawl_images', 'manual__2025-01-13T18:26:44.193357+00:00', '--job-id', '16', '--raw', '--subdir', 'DAGS_FOLDER/craw_check_update.py', '--cfg-path', '/tmp/tmp67v66ifn']
+[2025-01-13T18:40:39.803+0000] {standard_task_runner.py:105} INFO - Job 16: Subtask crawl_images
+[2025-01-13T18:40:39.860+0000] {task_command.py:467} INFO - Running <TaskInstance: dag_init.crawl_images manual__2025-01-13T18:26:44.193357+00:00 [running]> on host 392f66d325c9
+[2025-01-13T18:40:39.958+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='dag_init' AIRFLOW_CTX_TASK_ID='crawl_images' AIRFLOW_CTX_EXECUTION_DATE='2025-01-13T18:26:44.193357+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-13T18:26:44.193357+00:00'
+[2025-01-13T18:40:39.960+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-13T18:40:39.961+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-13T18:40:39.962+0000] {logging_mixin.py:190} INFO - Current task name:crawl_images state:running start_date:2025-01-13 18:40:39.753710+00:00
+[2025-01-13T18:40:39.962+0000] {logging_mixin.py:190} INFO - Dag name:dag_init and current dag run status:running
+[2025-01-13T18:40:39.963+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-13T18:40:39.964+0000] {taskinstance.py:3311} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/craw_check_update.py", line 25, in crawl_images
+    downloader.download(query, limit=50, output_dir=DATA_LAKE_DIR, adult_filter_off=True, force_replace=True, timeout=60)
+  File "/home/airflow/.local/lib/python3.12/site-packages/bing_image_downloader/downloader.py", line 24, in download
+    if Path.isdir(image_dir):
+       ^^^^^^^^^^
+AttributeError: type object 'Path' has no attribute 'isdir'. Did you mean: 'is_dir'?
+[2025-01-13T18:40:39.986+0000] {logging_mixin.py:190} INFO - Task instance in failure state
+[2025-01-13T18:40:39.987+0000] {logging_mixin.py:190} INFO - Task start:2025-01-13 18:40:39.753710+00:00 end:2025-01-13 18:40:39.986378+00:00 duration:0.232668
+[2025-01-13T18:40:39.988+0000] {logging_mixin.py:190} INFO - Task:<Task(PythonOperator): crawl_images> dag:<DAG: dag_init> dagrun:<DagRun dag_init @ 2025-01-13 18:26:44.193357+00:00: manual__2025-01-13T18:26:44.193357+00:00, state:running, queued_at: 2025-01-13 18:40:34.215575+00:00. externally triggered: True>
+[2025-01-13T18:40:39.989+0000] {logging_mixin.py:190} INFO - Failure caused by type object 'Path' has no attribute 'isdir'
+[2025-01-13T18:40:39.989+0000] {taskinstance.py:1225} INFO - Marking task as UP_FOR_RETRY. dag_id=dag_init, task_id=crawl_images, run_id=manual__2025-01-13T18:26:44.193357+00:00, execution_date=20250113T182644, start_date=20250113T184039, end_date=20250113T184039
+[2025-01-13T18:40:40.010+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-13T18:40:40.012+0000] {standard_task_runner.py:124} ERROR - Failed to execute job 16 for task crawl_images (type object 'Path' has no attribute 'isdir'; 147)
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/task/task_runner/standard_task_runner.py", line 117, in _start_by_fork
+    ret = args.func(args, dag=self.dag)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/cli_config.py", line 49, in command
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/cli.py", line 116, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 483, in task_run
+    task_return_code = _run_task_by_selected_method(args, _dag, ti)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 256, in _run_task_by_selected_method
+    return _run_raw_task(args, ti)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/cli/commands/task_command.py", line 341, in _run_raw_task
+    return ti._run_raw_task(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/session.py", line 97, in wrapper
+    return func(*args, session=session, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3005, in _run_raw_task
+    return _run_raw_task(
+           ^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 273, in _run_raw_task
+    TaskInstance._execute_task_with_callbacks(
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3159, in _execute_task_with_callbacks
+    result = self._execute_task(context, task_orig)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 3183, in _execute_task
+    return _execute_task(self, context, task_orig)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 767, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/taskinstance.py", line 733, in _execute_callable
+    return ExecutionCallableRunner(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/models/baseoperator.py", line 417, in wrapper
+    return func(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 238, in execute
+    return_value = self.execute_callable()
+                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/operators/python.py", line 256, in execute_callable
+    return runner.run(*self.op_args, **self.op_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/airflow/.local/lib/python3.12/site-packages/airflow/utils/operator_helpers.py", line 252, in run
+    return self.func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/dags/craw_check_update.py", line 25, in crawl_images
+    downloader.download(query, limit=50, output_dir=DATA_LAKE_DIR, adult_filter_off=True, force_replace=True, timeout=60)
+  File "/home/airflow/.local/lib/python3.12/site-packages/bing_image_downloader/downloader.py", line 24, in download
+    if Path.isdir(image_dir):
+       ^^^^^^^^^^
+AttributeError: type object 'Path' has no attribute 'isdir'. Did you mean: 'is_dir'?
+[2025-01-13T18:40:40.065+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 1
+[2025-01-13T18:40:40.090+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-13T18:40:40.092+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

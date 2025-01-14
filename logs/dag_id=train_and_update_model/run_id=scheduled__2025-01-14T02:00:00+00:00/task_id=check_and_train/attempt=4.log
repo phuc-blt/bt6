@@ -1,0 +1,31 @@
+[2025-01-14T03:54:50.435+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-14T03:54:50.453+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: train_and_update_model.check_and_train scheduled__2025-01-14T02:00:00+00:00 [queued]>
+[2025-01-14T03:54:50.462+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: train_and_update_model.check_and_train scheduled__2025-01-14T02:00:00+00:00 [queued]>
+[2025-01-14T03:54:50.463+0000] {taskinstance.py:2866} INFO - Starting attempt 4 of 5
+[2025-01-14T03:54:50.478+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): check_and_train> on 2025-01-14 02:00:00+00:00
+[2025-01-14T03:54:50.486+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=258) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-14T03:54:50.488+0000] {standard_task_runner.py:72} INFO - Started process 260 to run task
+[2025-01-14T03:54:50.488+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'train_and_update_model', 'check_and_train', 'scheduled__2025-01-14T02:00:00+00:00', '--job-id', '42', '--raw', '--subdir', 'DAGS_FOLDER/craw_check_update.py', '--cfg-path', '/tmp/tmpoiseij20']
+[2025-01-14T03:54:50.489+0000] {standard_task_runner.py:105} INFO - Job 42: Subtask check_and_train
+[2025-01-14T03:54:50.538+0000] {task_command.py:467} INFO - Running <TaskInstance: train_and_update_model.check_and_train scheduled__2025-01-14T02:00:00+00:00 [running]> on host b954e1e08ba9
+[2025-01-14T03:54:50.614+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='train_and_update_model' AIRFLOW_CTX_TASK_ID='check_and_train' AIRFLOW_CTX_EXECUTION_DATE='2025-01-14T02:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='4' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-14T02:00:00+00:00'
+[2025-01-14T03:54:50.615+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-14T03:54:50.616+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-14T03:54:50.616+0000] {logging_mixin.py:190} INFO - Current task name:check_and_train state:running start_date:2025-01-14 03:54:50.454000+00:00
+[2025-01-14T03:54:50.617+0000] {logging_mixin.py:190} INFO - Dag name:train_and_update_model and current dag run status:running
+[2025-01-14T03:54:50.617+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-14T03:54:50.618+0000] {craw_check_update.py:53} INFO - === Bắt đầu quá trình kiểm tra model ===
+[2025-01-14T03:54:50.619+0000] {craw_check_update.py:59} INFO - Đang đọc thông tin từ file: /opt/***/experiment_dir/2025_01_14/results.csv
+[2025-01-14T03:54:50.622+0000] {craw_check_update.py:71} ERROR - Lỗi khi đọc file hoặc tính toán mAP50: [Errno 2] No such file or directory: '/opt/***/experiment_dir/2025_01_14/results.csv'
+[2025-01-14T03:54:50.622+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-14T03:54:50.632+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-14T03:54:50.633+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=train_and_update_model, task_id=check_and_train, run_id=scheduled__2025-01-14T02:00:00+00:00, execution_date=20250114T020000, start_date=20250114T035450, end_date=20250114T035450
+[2025-01-14T03:54:50.642+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-14T03:54:50.643+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-14T03:54:50.643+0000] {logging_mixin.py:190} INFO - Dag name:train_and_update_model queued_at:2025-01-14 03:51:50.959034+00:00
+[2025-01-14T03:54:50.644+0000] {logging_mixin.py:190} INFO - Task hostname:b954e1e08ba9 operator:PythonOperator
+[2025-01-14T03:54:50.672+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-14T03:54:50.699+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-14T03:54:50.704+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

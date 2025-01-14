@@ -1,0 +1,28 @@
+[2025-01-14T04:00:02.637+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-14T04:00:02.655+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: predict_tomato_images.check_and_predict scheduled__2025-01-14T03:00:00+00:00 [queued]>
+[2025-01-14T04:00:02.664+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: predict_tomato_images.check_and_predict scheduled__2025-01-14T03:00:00+00:00 [queued]>
+[2025-01-14T04:00:02.665+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-14T04:00:02.680+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): check_and_predict> on 2025-01-14 03:00:00+00:00
+[2025-01-14T04:00:02.687+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=82) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-14T04:00:02.689+0000] {standard_task_runner.py:72} INFO - Started process 84 to run task
+[2025-01-14T04:00:02.689+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'predict_tomato_images', 'check_and_predict', 'scheduled__2025-01-14T03:00:00+00:00', '--job-id', '45', '--raw', '--subdir', 'DAGS_FOLDER/craw_check_update.py', '--cfg-path', '/tmp/tmpgjntb5yf']
+[2025-01-14T04:00:02.691+0000] {standard_task_runner.py:105} INFO - Job 45: Subtask check_and_predict
+[2025-01-14T04:00:02.747+0000] {task_command.py:467} INFO - Running <TaskInstance: predict_tomato_images.check_and_predict scheduled__2025-01-14T03:00:00+00:00 [running]> on host b954e1e08ba9
+[2025-01-14T04:00:02.839+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='predict_tomato_images' AIRFLOW_CTX_TASK_ID='check_and_predict' AIRFLOW_CTX_EXECUTION_DATE='2025-01-14T03:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-14T03:00:00+00:00'
+[2025-01-14T04:00:02.841+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-14T04:00:02.842+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-14T04:00:02.843+0000] {logging_mixin.py:190} INFO - Current task name:check_and_predict state:running start_date:2025-01-14 04:00:02.656264+00:00
+[2025-01-14T04:00:02.844+0000] {logging_mixin.py:190} INFO - Dag name:predict_tomato_images and current dag run status:running
+[2025-01-14T04:00:02.844+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-14T04:00:02.846+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-14T04:00:02.858+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-14T04:00:02.862+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=predict_tomato_images, task_id=check_and_predict, run_id=scheduled__2025-01-14T03:00:00+00:00, execution_date=20250114T030000, start_date=20250114T040002, end_date=20250114T040002
+[2025-01-14T04:00:02.873+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-14T04:00:02.873+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-14T04:00:02.874+0000] {logging_mixin.py:190} INFO - Dag name:predict_tomato_images queued_at:2025-01-14 04:00:00.908344+00:00
+[2025-01-14T04:00:02.874+0000] {logging_mixin.py:190} INFO - Task hostname:b954e1e08ba9 operator:PythonOperator
+[2025-01-14T04:00:02.913+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-14T04:00:02.930+0000] {taskinstance.py:3895} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-01-14T04:00:02.932+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

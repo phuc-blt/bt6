@@ -1,0 +1,14 @@
+pillow
+bing-image-downloader
+scikit-learn
+numpy
+opencv-python
+torch
+tensorflow
+flask
+uvicorn
+gradio
+requests
+ultralytics
+torch
+
