@@ -1,42 +1,48 @@
-from fastapi import FastAPI, UploadFile
+from fastapi import FastAPI, File, UploadFile
+import torch
+from pydantic import BaseModel
+from typing import List
+import io
 from ultralytics import YOLO
-import shutil
-import os
-
-# Load model
-MODEL_PATH = "/home/phuc/airflow/model/current_model.pt"
-model = YOLO(MODEL_PATH)
+from PIL import Image
 
 app = FastAPI()
 
-@app.get("/")
-def read_root():
-    return {"message": "Tomato Detection API is running."}
+# Load YOLO model
+model = YOLO("best.pt") 
 
-@app.post("/predict/")
-async def predict_image(file: UploadFile):
-    """
-    Predict objects in an uploaded image using the YOLOv11 model.
-    """
-    # Save the uploaded image
-    image_path = "/home/phuc/airflow/outputdata"
-    with open(image_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
-    
-    # Run prediction
-    results = model(image_path)
+class Detection(BaseModel):
+    xmin: float
+    ymin: float
+    xmax: float
+    ymax: float
+    confidence: float
+    class_label: str
 
-    # Parse results
-    predictions = []
-    for result in results:
-        for box in result.boxes:
-            predictions.append({
-                "label": box.label,
-                "confidence": float(box.conf),
-                "bbox": box.xywh.tolist()
-            })
+@app.post("/predict", response_model=List[Detection])
+async def predict(image: UploadFile = File(...)):
+    # Read image file
+    content = await image.read()
+    img = Image.open(io.BytesIO(content))
 
-    # Remove the temporary image
-    os.remove(image_path)
-    
-    return {"predictions": predictions}
+    # Inference with YOLO model
+    results = model(img)
+    detections = results.pandas().xyxy[0]
+
+    # Convert detections to response format
+    response = []
+    for _, row in detections.iterrows():
+        response.append({
+            "xmin": row["xmin"],
+            "ymin": row["ymin"],
+            "xmax": row["xmax"],
+            "ymax": row["ymax"],
+            "confidence": row["confidence"],
+            "class_label": row["name"]
+        })
+
+    return response
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=5000)

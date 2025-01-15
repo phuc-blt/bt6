@@ -1,27 +1,26 @@
-import os
-import logging
-import shutil
-import json
-from datetime import datetime, timedelta
-import pandas as pd
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-from airflow.utils.dates import days_ago
+from datetime import datetime, timedelta
 from bing_image_downloader import downloader
-import torch
-from train import train_yolo 
-from torch.utils.data import DataLoader, Dataset
-from torchvision import transforms
-from PIL import Image
+import os
+import requests
+import json
+import subprocess
+import pandas as pd
+import shutil
+import logging
 
-# Logging setup
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+# Default arguments for DAG
+default_args = {
+    'owner': 'airflow',
+    'depends_on_past': False,
+    'email_on_failure': False,
+    'email_on_retry': False,
+    'retries': 1,
+    'retry_delay': timedelta(minutes=5),
+}
 
-# Global variables
-EXPERIMENT_DIR = "/opt/airflow/experiment_dir"
-WEIGHT_DIR = "/opt/airflow/weight_dir"
-
-# Helper functions
+# Function: Crawl tomato images
 def crawl_tomato_images(output_folder="data_lake", num_images=100):
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -38,37 +37,66 @@ def crawl_tomato_images(output_folder="data_lake", num_images=100):
     )
     logging.info(f"Ảnh đã được lưu trong thư mục: {output_folder}/{search_term}")
 
+# Function: Process images from data_lake
+def process_images_from_datalake():
+    image_folder = "/opt/airflow/data_lake"
+    output_folder = "/opt/airflow/data_pool"
+    api_url = "http://localhost:5000/predict"
 
-def predict_and_label(data_lake, data_pool):
-    # Tạo folder data_pool nếu chưa tồn tại
-    if not os.path.exists(data_pool):
-        os.makedirs(data_pool)
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
 
-    for image in os.listdir(data_lake):
-        if image.endswith(('.jpg', '.png')):  # Chỉ xử lý file ảnh
-            image_path = os.path.join(data_lake, image)
+    images = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.png'))]
+    if len(images) >= 50:
+        for img in images[:50]:
+            with open(os.path.join(image_folder, img), 'rb') as file:
+                response = requests.post(api_url, files={'image': file})
+                labels = response.json()
+                with open(os.path.join(output_folder, f"{os.path.splitext(img)[0]}.json"), 'w') as label_file:
+                    json.dump(labels, label_file)
 
-            # Giả lập kết quả API
-            response = {
-                "image": image,
-                "label": "tomato",
-                "confidence": 0.95
-            }
+# Function: Train a new model
+def train_new_model():
+    data_pool = "/opt/airflow/data_pool"
+    model_dir = "/opt/airflow/model"
+    weight_path = os.path.join(model_dir, "best.pt")  # Đường dẫn tới best.pt
+    experiment_dir = "experiments"
 
-            # Xử lý tên file JSON
-            label_file = os.path.join(data_pool, image.rsplit(".", 1)[0] + ".json")
+    if not os.path.exists(model_dir):
+        os.makedirs(model_dir)
 
-            # Kiểm tra nếu file nhãn đã tồn tại
-            if os.path.exists(label_file):
-                print(f"Label already exists for {image}, skipping.")
-                continue
+    labels = [f for f in os.listdir(data_pool) if f.endswith('.json')]
+    if len(labels) >= 50:
+        logging.info("Bắt đầu huấn luyện mô hình mới...")
+        
+        # Cấu hình dữ liệu và các thông số huấn luyện
+        data_yaml_path = "data/tomato.yaml"  # File cấu hình dữ liệu YOLO
+        output_path = os.path.join(experiment_dir, datetime.now().strftime("%Y-%m-%d_%H-%M-%S"))
+        os.makedirs(output_path, exist_ok=True)
+        
+        # Lệnh huấn luyện YOLO
+        train_command = [
+            "yolo", "train", 
+            "--data", data_yaml_path,
+            "--weights", weight_path,
+            "--epochs", "50",
+            "--img-size", "640",
+            "--project", output_path,
+            "--name", "tomato_experiment"
+        ]
 
-            # Lưu nhãn dưới dạng JSON
-            with open(label_file, "w") as f:
-                json.dump(response, f)
+        try:
+            subprocess.run(train_command, check=True)
+            logging.info(f"Mô hình mới được lưu tại: {output_path}")
+            
+            # So sánh độ chính xác (mAP50)
+            current_day = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+            eval_model(current_day, experiment_dir, model_dir)
 
-            print(f"Processed and labeled: {image}")
+        except subprocess.CalledProcessError as e:
+            logging.error(f"Lỗi khi huấn luyện mô hình: {e}")
 
+# Function: Evaluate the model
 def eval_model(current_day, EXPERIMENT_DIR, WEIGHT_DIR):
     logging.info("=== Bắt đầu quá trình kiểm tra model ===")
 
@@ -114,137 +142,36 @@ def eval_model(current_day, EXPERIMENT_DIR, WEIGHT_DIR):
     else:
         logging.info("Kết quả mới không tốt hơn. Không có thay đổi nào được thực hiện.")
 
-def train_model(data_lake, EXPERIMENT_DIR, WEIGHT_DIR):
-    logging.info("=== Bắt đầu quá trình huấn luyện mô hình ===")
-
-    # Chuẩn bị dữ liệu (dưới dạng Dataset và DataLoader)
-    class TomatoDataset(Dataset):
-        def __init__(self, image_folder, transform=None):
-            self.image_folder = image_folder
-            self.image_files = [f for f in os.listdir(image_folder) if f.endswith(('.jpg', '.png'))]
-            self.transform = transform
-
-        def __len__(self):
-            return len(self.image_files)
-
-        def __getitem__(self, idx):
-            img_name = os.path.join(self.image_folder, self.image_files[idx])
-            image = Image.open(img_name)
-            label = 0  # Giả sử label là cà chua (0 - tomato)
-
-            if self.transform:
-                image = self.transform(image)
-
-            return image, label
-
-    # Chuyển ảnh thành Tensor và chuẩn hóa
-    transform = transforms.Compose([
-        transforms.Resize((224, 224)),  # Thay đổi kích thước ảnh nếu cần
-        transforms.ToTensor(),
-        transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])  # Chuẩn hóa theo ImageNet
-    ])
-
-    dataset = TomatoDataset(data_lake, transform)
-    dataloader = DataLoader(dataset, batch_size=32, shuffle=True)
-
-    # Khởi tạo mô hình và optimizer
-    model = YourModel()  # Thay YourModel bằng mô hình của bạn
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
-    criterion = torch.nn.CrossEntropyLoss()
-
-    # Đưa mô hình vào chế độ huấn luyện
-    model.train()
-
-    num_epochs = 5
-    for epoch in range(num_epochs):
-        running_loss = 0.0
-        for inputs, labels in dataloader:
-            # Di chuyển dữ liệu vào GPU nếu có
-            inputs, labels = inputs.cuda(), labels.cuda()
-
-            # Đặt gradient về 0
-            optimizer.zero_grad()
-
-            # Forward pass
-            outputs = model(inputs)
-            loss = criterion(outputs, labels)
-
-            # Backward pass và cập nhật trọng số
-            loss.backward()
-            optimizer.step()
-
-            running_loss += loss.item()
-
-        avg_loss = running_loss / len(dataloader)
-        logging.info(f"Epoch {epoch+1}/{num_epochs}, Loss: {avg_loss:.4f}")
-
-    logging.info("=== Quá trình huấn luyện kết thúc ===")
-
-    # Lưu mô hình sau khi huấn luyện
-    current_day = datetime.now().strftime("%Y_%m_%d")
-    model_save_path = os.path.join(EXPERIMENT_DIR, current_day, "weights", "best.pt")
-    torch.save(model.state_dict(), model_save_path)
-    logging.info(f"Đã lưu mô hình huấn luyện tại {model_save_path}")
-
-    # Gọi eval_model để so sánh và cập nhật trọng số tốt nhất nếu cần
-    eval_model(current_day, EXPERIMENT_DIR, WEIGHT_DIR)
-
-# DAG definitions
+# Define DAG
 with DAG(
-    "crawl_tomato_images",
-    default_args={"owner": "airflow", "retries": 1, "retry_delay": timedelta(minutes=5)},
-    description="Crawl tomato images every day at 9 AM",
-    schedule_interval="0 9 * * *",
-    start_date=days_ago(1),
+    dag_id='tomato_pipeline',
+    default_args=default_args,
+    description='A pipeline to crawl, process, and train models for tomato detection',
+    schedule_interval='@hourly',
+    start_date=datetime(2025, 1, 1),
     catchup=False,
-) as dag_crawl:
+) as dag:
 
-    crawl_task = PythonOperator(
-        task_id="crawl_tomato_images",
-        python_callable=crawl_tomato_images,
-        op_kwargs={"output_folder": "data_lake", "num_images": 100},
+    # Task 1: Crawl images
+    task_crawl_images = PythonOperator(
+        task_id='download_images',
+        python_callable=crawl_tomato_images
     )
 
-with DAG(
-    "predict_tomato_images",
-    default_args={"owner": "airflow", "retries": 1, "retry_delay": timedelta(minutes=5)},
-    description="Predict tomato images every hour if sufficient data",
-    schedule_interval="@hourly",
-    start_date=days_ago(1),
-    catchup=False,
-) as dag_predict:
-
-    def check_and_predict():
-        if len(os.listdir("data_lake")) >= 50:
-            if not os.path.exists("data_pool"):
-                os.makedirs("data_pool")
-            predict_and_label("data_lake", "data_pool")
-
-    process_and_label_task = PythonOperator(
-        task_id='predict_and_label',
-        python_callable=predict_and_label,
-        op_args=["/opt/airflow/data_lake/tomato", "/opt/airflow/data_pool"]
+    # Task 2: Process images
+    task_process_images = PythonOperator(
+        task_id='process_images',
+        python_callable=process_images_from_datalake,
     )
-
-with DAG(
-    "train_and_update_model",
-    default_args={"owner": "airflow", "retries": 1, "retry_delay": timedelta(minutes=5)},
-    description="Train and update model every hour if sufficient data",
-    schedule_interval="@hourly",
-    start_date=days_ago(1),
-    catchup=False,
-) as dag_train:
-
-    def check_and_train(EXPERIMENT_DIR, WEIGHT_DIR):
-        current_day = datetime.now().strftime("%Y_%m_%d")
-        train_model("/opt/airflow/data_lake/tomato", EXPERIMENT_DIR, WEIGHT_DIR)
-        eval_model(current_day, EXPERIMENT_DIR, WEIGHT_DIR)
-
-    train_task = PythonOperator(
-        task_id="train_and_update_model",
-        python_callable=check_and_train,
-        op_kwargs={
-            "EXPERIMENT_DIR": EXPERIMENT_DIR,
-            "WEIGHT_DIR": WEIGHT_DIR,
-        },
+        # Task 3: Train new model
+    task_train_model = PythonOperator(
+        task_id='train_model',
+        python_callable=train_new_model,
     )
+    
+    task_danhgia = PythonOperator(
+        task_id='eval_model',
+        python_callable=eval_model,
+    )
+    # Define task dependencies
+    task_crawl_images >> task_process_images >> task_train_model >> task_danhgia
