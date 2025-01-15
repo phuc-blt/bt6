@@ -1239,3 +1239,388 @@ ModuleNotFoundError: No module named 'bing_image_downloader'
 [2025-01-15T09:35:38.964+0000] {logging_mixin.py:190} INFO - [2025-01-15T09:35:38.964+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-01-15T09:35:38.994+0000] {logging_mixin.py:190} INFO - [2025-01-15T09:35:38.993+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 09:00:00+00:00, run_after=2025-01-15 10:00:00+00:00
 [2025-01-15T09:35:39.017+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.110 seconds
+[2025-01-15T10:50:17.494+0000] {processor.py:186} INFO - Started process (PID=60) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:50:17.497+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:50:17.502+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:50:17.501+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:50:17.536+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:50:17.576+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:50:17.575+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:50:17.610+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:50:17.609+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:50:17.641+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.158 seconds
+[2025-01-15T10:50:47.997+0000] {processor.py:186} INFO - Started process (PID=130) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:50:47.998+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:50:48.000+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:50:48.000+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:50:48.014+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:50:48.034+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:50:48.034+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:50:48.061+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:50:48.061+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:50:48.080+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.089 seconds
+[2025-01-15T10:51:18.497+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:51:18.498+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:51:18.501+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:51:18.501+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:51:18.517+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:51:18.545+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:51:18.545+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:51:18.574+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:51:18.574+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:51:18.593+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.100 seconds
+[2025-01-15T10:51:49.060+0000] {processor.py:186} INFO - Started process (PID=260) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:51:49.061+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:51:49.063+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:51:49.063+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:51:49.076+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:51:49.095+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:51:49.095+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:51:49.122+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:51:49.122+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:51:49.144+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.091 seconds
+[2025-01-15T10:52:19.416+0000] {processor.py:186} INFO - Started process (PID=325) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:19.417+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:52:19.420+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:19.420+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:19.434+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:19.460+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:19.459+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:52:19.485+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:19.485+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:52:19.507+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.096 seconds
+[2025-01-15T10:52:21.057+0000] {processor.py:186} INFO - Started process (PID=335) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:21.058+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:52:21.061+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:21.061+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:21.078+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:21.102+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:21.102+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:52:21.133+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:21.133+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:52:21.158+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.107 seconds
+[2025-01-15T10:52:51.665+0000] {processor.py:186} INFO - Started process (PID=406) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:51.666+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:52:51.670+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:51.669+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:51.686+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:52:51.712+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:51.711+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:52:51.741+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:52:51.741+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:52:51.762+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.103 seconds
+[2025-01-15T10:53:21.799+0000] {processor.py:186} INFO - Started process (PID=471) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:21.801+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:53:21.805+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:21.804+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:21.824+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:21.853+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:21.853+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:53:21.887+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:21.887+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:53:21.922+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.130 seconds
+[2025-01-15T10:53:52.055+0000] {processor.py:186} INFO - Started process (PID=527) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:52.057+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:53:52.060+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:52.060+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:52.096+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:52.170+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:52.170+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:53:52.239+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:52.238+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:53:52.293+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.249 seconds
+[2025-01-15T10:53:57.605+0000] {processor.py:186} INFO - Started process (PID=565) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:57.606+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:53:57.608+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:57.607+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:57.626+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:53:57.739+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:57.739+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:53:57.764+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:53:57.763+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:53:57.787+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.189 seconds
+[2025-01-15T10:54:04.540+0000] {processor.py:186} INFO - Started process (PID=586) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:54:04.541+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:54:04.542+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:54:04.542+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:54:04.564+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:54:04.579+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:54:04.578+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:54:04.607+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:54:04.607+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:54:04.631+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.097 seconds
+[2025-01-15T10:54:34.798+0000] {processor.py:186} INFO - Started process (PID=649) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:54:34.799+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:54:34.801+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:54:34.801+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:54:34.814+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:54:34.911+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:54:34.911+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:54:34.932+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:54:34.932+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:54:34.953+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.159 seconds
+[2025-01-15T10:55:05.289+0000] {processor.py:186} INFO - Started process (PID=713) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:55:05.290+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:55:05.293+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:55:05.292+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:55:05.307+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:55:05.404+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:55:05.404+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:55:05.425+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:55:05.425+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:55:05.443+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.161 seconds
+[2025-01-15T10:55:36.244+0000] {processor.py:186} INFO - Started process (PID=773) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:55:36.245+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:55:36.247+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:55:36.247+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:55:36.261+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:55:36.368+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:55:36.367+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:55:36.391+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:55:36.391+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:55:36.409+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.171 seconds
+[2025-01-15T10:56:06.655+0000] {processor.py:186} INFO - Started process (PID=832) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:56:06.656+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:56:06.657+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:56:06.657+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:56:06.674+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:56:06.785+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:56:06.785+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:56:06.807+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:56:06.807+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:56:06.825+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.176 seconds
+[2025-01-15T10:56:36.877+0000] {processor.py:186} INFO - Started process (PID=896) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:56:36.878+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:56:36.879+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:56:36.879+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:56:36.893+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:56:36.994+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:56:36.994+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:56:37.014+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:56:37.014+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:56:37.033+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.161 seconds
+[2025-01-15T10:57:07.212+0000] {processor.py:186} INFO - Started process (PID=961) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:57:07.213+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:57:07.214+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:57:07.214+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:57:07.228+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:57:07.343+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:57:07.343+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:57:07.366+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:57:07.366+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:57:07.392+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.185 seconds
+[2025-01-15T10:57:37.613+0000] {processor.py:186} INFO - Started process (PID=1026) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:57:37.614+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:57:37.616+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:57:37.615+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:57:37.632+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:57:37.739+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:57:37.739+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:57:37.763+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:57:37.763+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:57:37.787+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.180 seconds
+[2025-01-15T10:58:08.342+0000] {processor.py:186} INFO - Started process (PID=1089) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:58:08.344+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:58:08.345+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:58:08.345+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:58:08.363+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:58:08.476+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:58:08.476+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:58:08.501+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:58:08.501+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:58:08.520+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.183 seconds
+[2025-01-15T10:58:38.554+0000] {processor.py:186} INFO - Started process (PID=1154) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:58:38.555+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:58:38.557+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:58:38.556+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:58:38.570+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:58:38.668+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:58:38.667+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:58:38.688+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:58:38.688+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:58:38.708+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.159 seconds
+[2025-01-15T10:59:09.705+0000] {processor.py:186} INFO - Started process (PID=1219) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:59:09.706+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T10:59:09.707+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:59:09.707+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:59:09.721+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T10:59:09.822+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:59:09.821+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T10:59:09.843+0000] {logging_mixin.py:190} INFO - [2025-01-15T10:59:09.843+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 10:00:00+00:00, run_after=2025-01-15 11:00:00+00:00
+[2025-01-15T10:59:09.862+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.163 seconds
+[2025-01-15T12:57:44.782+0000] {processor.py:186} INFO - Started process (PID=61) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:57:44.785+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T12:57:44.789+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:57:44.788+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:57:44.813+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:57:45.051+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:57:45.050+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T12:57:45.100+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:57:45.100+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 12:00:00+00:00, run_after=2025-01-15 13:00:00+00:00
+[2025-01-15T12:57:45.125+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.349 seconds
+[2025-01-15T12:58:15.436+0000] {processor.py:186} INFO - Started process (PID=130) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:58:15.437+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T12:58:15.440+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:58:15.440+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:58:15.455+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:58:15.574+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:58:15.574+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T12:58:15.596+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:58:15.595+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 12:00:00+00:00, run_after=2025-01-15 13:00:00+00:00
+[2025-01-15T12:58:15.615+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.185 seconds
+[2025-01-15T12:58:46.120+0000] {processor.py:186} INFO - Started process (PID=195) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:58:46.121+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T12:58:46.123+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:58:46.123+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:58:46.135+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:58:46.242+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:58:46.242+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T12:58:46.263+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:58:46.262+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 12:00:00+00:00, run_after=2025-01-15 13:00:00+00:00
+[2025-01-15T12:58:46.282+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.167 seconds
+[2025-01-15T12:59:16.787+0000] {processor.py:186} INFO - Started process (PID=260) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:59:16.788+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T12:59:16.791+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:59:16.791+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:59:16.806+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:59:16.952+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:59:16.952+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T12:59:16.977+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:59:16.977+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 12:00:00+00:00, run_after=2025-01-15 13:00:00+00:00
+[2025-01-15T12:59:17.003+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.222 seconds
+[2025-01-15T12:59:47.469+0000] {processor.py:186} INFO - Started process (PID=325) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:59:47.470+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T12:59:47.473+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:59:47.472+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:59:47.487+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T12:59:47.676+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:59:47.676+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T12:59:47.705+0000] {logging_mixin.py:190} INFO - [2025-01-15T12:59:47.704+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 12:00:00+00:00, run_after=2025-01-15 13:00:00+00:00
+[2025-01-15T12:59:47.726+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.263 seconds
+[2025-01-15T13:00:18.416+0000] {processor.py:186} INFO - Started process (PID=396) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:00:18.417+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:00:18.420+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:00:18.420+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:00:18.435+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:00:18.548+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:00:18.547+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:00:18.570+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:00:18.570+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:00:18.589+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.179 seconds
+[2025-01-15T13:00:49.296+0000] {processor.py:186} INFO - Started process (PID=461) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:00:49.297+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:00:49.300+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:00:49.299+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:00:49.316+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:00:49.435+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:00:49.435+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:00:49.462+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:00:49.462+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:00:49.485+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.195 seconds
+[2025-01-15T13:01:19.602+0000] {processor.py:186} INFO - Started process (PID=526) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:01:19.603+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:01:19.606+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:01:19.606+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:01:19.623+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:01:19.757+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:01:19.756+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:01:19.780+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:01:19.780+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:01:19.801+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.206 seconds
+[2025-01-15T13:01:49.954+0000] {processor.py:186} INFO - Started process (PID=591) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:01:49.955+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:01:49.958+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:01:49.958+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:01:49.973+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:01:50.095+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:01:50.095+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:01:50.118+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:01:50.118+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:01:50.140+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.192 seconds
+[2025-01-15T13:02:20.246+0000] {processor.py:186} INFO - Started process (PID=656) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:02:20.247+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:02:20.252+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:02:20.251+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:02:20.269+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:02:20.392+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:02:20.392+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:02:20.415+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:02:20.415+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:02:20.438+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.199 seconds
+[2025-01-15T13:02:50.478+0000] {processor.py:186} INFO - Started process (PID=722) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:02:50.479+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:02:50.482+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:02:50.482+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:02:50.499+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:02:50.616+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:02:50.616+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:02:50.642+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:02:50.642+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:02:50.664+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.192 seconds
+[2025-01-15T13:03:20.773+0000] {processor.py:186} INFO - Started process (PID=786) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:03:20.774+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:03:20.777+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:03:20.777+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:03:20.791+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:03:20.907+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:03:20.907+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:03:20.932+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:03:20.932+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:03:20.952+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.184 seconds
+[2025-01-15T13:03:51.945+0000] {processor.py:186} INFO - Started process (PID=852) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:03:51.947+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:03:51.949+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:03:51.949+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:03:51.966+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:03:52.088+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:03:52.088+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:03:52.114+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:03:52.114+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:03:52.137+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.199 seconds
+[2025-01-15T13:04:22.966+0000] {processor.py:186} INFO - Started process (PID=917) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:04:22.967+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:04:22.969+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:04:22.969+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:04:22.986+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:04:23.108+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:04:23.108+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:04:23.134+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:04:23.134+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:04:23.160+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.200 seconds
+[2025-01-15T13:04:53.854+0000] {processor.py:186} INFO - Started process (PID=982) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:04:53.856+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:04:53.858+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:04:53.858+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:04:53.874+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:04:53.993+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:04:53.993+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:04:54.023+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:04:54.023+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:04:54.046+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.198 seconds
+[2025-01-15T13:05:24.164+0000] {processor.py:186} INFO - Started process (PID=1047) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:05:24.165+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:05:24.170+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:05:24.169+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:05:24.189+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:05:24.311+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:05:24.310+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:05:24.336+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:05:24.336+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:05:24.358+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.199 seconds
+[2025-01-15T13:05:55.153+0000] {processor.py:186} INFO - Started process (PID=1112) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:05:55.154+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:05:55.157+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:05:55.157+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:05:55.172+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:05:55.282+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:05:55.282+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:05:55.306+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:05:55.306+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:05:55.327+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.180 seconds
+[2025-01-15T13:06:25.397+0000] {processor.py:186} INFO - Started process (PID=1177) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:06:25.398+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:06:25.401+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:06:25.401+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:06:25.416+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:06:25.550+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:06:25.550+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:06:25.577+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:06:25.576+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:06:25.596+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.205 seconds
+[2025-01-15T13:06:55.693+0000] {processor.py:186} INFO - Started process (PID=1242) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:06:55.695+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:06:55.697+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:06:55.697+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:06:55.714+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:06:55.837+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:06:55.837+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:06:55.859+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:06:55.859+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:06:55.883+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.195 seconds
+[2025-01-15T13:07:26.628+0000] {processor.py:186} INFO - Started process (PID=1307) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:07:26.629+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:07:26.632+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:07:26.632+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:07:26.651+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:07:26.790+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:07:26.790+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:07:26.815+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:07:26.814+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:07:26.838+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.216 seconds
+[2025-01-15T13:07:57.391+0000] {processor.py:186} INFO - Started process (PID=1372) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:07:57.392+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:07:57.395+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:07:57.395+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:07:57.410+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:07:57.524+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:07:57.524+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:07:57.549+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:07:57.549+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:07:57.569+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.184 seconds
+[2025-01-15T13:08:27.891+0000] {processor.py:186} INFO - Started process (PID=1437) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:08:27.892+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:08:27.895+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:08:27.895+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:08:27.910+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:08:28.016+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:08:28.016+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:08:28.044+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:08:28.044+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:08:28.065+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.179 seconds
+[2025-01-15T13:08:58.127+0000] {processor.py:186} INFO - Started process (PID=1502) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:08:58.128+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:08:58.131+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:08:58.131+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:08:58.148+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:08:58.268+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:08:58.268+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:08:58.293+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:08:58.293+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:08:58.313+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.193 seconds
+[2025-01-15T13:09:28.815+0000] {processor.py:186} INFO - Started process (PID=1567) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:28.816+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:09:28.819+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:28.818+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:28.838+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:28.952+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:28.952+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:09:28.974+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:28.974+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:09:28.994+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.186 seconds
+[2025-01-15T13:09:58.903+0000] {processor.py:186} INFO - Started process (PID=1632) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:58.905+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:09:58.907+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:58.907+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:58.922+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:59.030+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:59.029+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:09:59.054+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:59.054+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:09:59.077+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.179 seconds
+[2025-01-15T13:09:59.785+0000] {processor.py:186} INFO - Started process (PID=1645) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:59.786+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:09:59.790+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:59.789+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:59.806+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:09:59.817+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:59.817+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:09:59.842+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:09:59.841+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:09:59.862+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.082 seconds
+[2025-01-15T13:10:00.910+0000] {processor.py:186} INFO - Started process (PID=1647) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:00.911+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:10:00.914+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:00.914+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:00.932+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:00.944+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:00.944+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:10:00.969+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:00.969+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:10:00.991+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.088 seconds
+[2025-01-15T13:10:06.029+0000] {processor.py:186} INFO - Started process (PID=1648) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:06.031+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:10:06.034+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:06.034+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:06.051+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:06.061+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:06.061+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:10:06.086+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:06.086+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:10:06.105+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.081 seconds
+[2025-01-15T13:10:36.390+0000] {processor.py:186} INFO - Started process (PID=1713) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:36.392+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:10:36.394+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:36.394+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:36.407+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:10:36.506+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:36.506+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:10:36.528+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:10:36.528+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:10:36.547+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.163 seconds
+[2025-01-15T13:11:06.850+0000] {processor.py:186} INFO - Started process (PID=1777) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:11:06.851+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:11:06.854+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:11:06.853+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:11:06.866+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:11:06.969+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:11:06.969+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:11:06.992+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:11:06.992+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:11:07.011+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.166 seconds
+[2025-01-15T13:11:37.567+0000] {processor.py:186} INFO - Started process (PID=1842) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:11:37.569+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:11:37.571+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:11:37.571+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:11:37.584+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:11:37.696+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:11:37.696+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:11:37.726+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:11:37.726+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:11:37.745+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.184 seconds
+[2025-01-15T13:12:08.324+0000] {processor.py:186} INFO - Started process (PID=1907) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:12:08.326+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:12:08.329+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:12:08.328+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:12:08.342+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:12:08.440+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:12:08.439+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:12:08.467+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:12:08.467+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:12:08.489+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.170 seconds
+[2025-01-15T13:12:38.527+0000] {processor.py:186} INFO - Started process (PID=1972) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:12:38.528+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:12:38.531+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:12:38.531+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:12:38.547+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:12:38.666+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:12:38.666+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:12:38.695+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:12:38.695+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:12:38.720+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.199 seconds
+[2025-01-15T13:13:08.756+0000] {processor.py:186} INFO - Started process (PID=2037) to work on /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:13:08.758+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/craw_check_update.py for tasks to queue
+[2025-01-15T13:13:08.761+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:13:08.760+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:13:08.780+0000] {processor.py:925} INFO - DAG(s) 'tomato_pipeline' retrieved from /opt/airflow/dags/craw_check_update.py
+[2025-01-15T13:13:08.892+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:13:08.892+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-01-15T13:13:08.914+0000] {logging_mixin.py:190} INFO - [2025-01-15T13:13:08.914+0000] {dag.py:4180} INFO - Setting next_dagrun for tomato_pipeline to 2025-01-15 13:00:00+00:00, run_after=2025-01-15 14:00:00+00:00
+[2025-01-15T13:13:08.932+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/craw_check_update.py took 0.181 seconds

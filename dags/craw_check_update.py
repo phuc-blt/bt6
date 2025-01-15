@@ -41,7 +41,7 @@ def crawl_tomato_images(output_folder="data_lake", num_images=100):
 def process_images_from_datalake():
     image_folder = "/opt/airflow/data_lake/tomato"
     output_folder = "/opt/airflow/data_pool"
-    api_url = "http://0.0.0.0:5000/predict"
+    api_url = "http://0.0.0.0:5000/predict/"
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -163,15 +163,19 @@ with DAG(
         task_id='process_images',
         python_callable=process_images_from_datalake,
     )
-        # Task 3: Train new model
+
+    # Task 3: Train new model
     task_train_model = PythonOperator(
         task_id='train_model',
         python_callable=train_new_model,
     )
     
+    # Task 4: Evaluate model
     task_danhgia = PythonOperator(
         task_id='eval_model',
         python_callable=eval_model,
+        op_args=[datetime.now().strftime("%Y-%m-%d_%H-%M-%S"), 'experiments', '/opt/airflow/model'],
     )
+
     # Define task dependencies
     task_crawl_images >> task_process_images >> task_train_model >> task_danhgia

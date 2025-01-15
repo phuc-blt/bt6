@@ -1,86 +1,58 @@
-import os
-import cv2
-import json
-import numpy as np
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, File, UploadFile
+import uvicorn
+import torch
 from pydantic import BaseModel
+from PIL import Image
+import numpy as np
+import io
 from ultralytics import YOLO
-from typing import List
-from pathlib import Path
-import logging
+from PIL import Image
 
 app = FastAPI()
 
-model = YOLO('last.pt')
+model = YOLO("last.pt")  # Replace "best.pt" with the correct path to your trained model
 
-class BatchPredictPayload(BaseModel):
-    data_folder: str
-    output_folder: str
 
-@app.post("/predict/")
-async def predict(payload: BatchPredictPayload):
-    """
-    API to perform batch predictions using YOLO model.
-    """
-    logging.basicConfig(level=logging.INFO)
+@app.post("/predict")
+async def predict(file: UploadFile = File(...)):
+    # Load and preprocess the image
+    image = Image.open(io.BytesIO(await file.read()))
+    image = image.resize((640, 640))  # Resize to model's input size
+    input_data = np.array(image).astype(np.float32) / 255.0  # Normalize
+    input_data = np.transpose(input_data, (2, 0, 1))  # HWC to CHW
+    input_data = np.expand_dims(input_data, axis=0)  # Add batch dimension
 
-    data_folder = payload.data_folder
-    output_folder = payload.output_folder
+    # Convert to PyTorch tensor
+    input_tensor = torch.tensor(input_data).float()
 
-    try:
-        if not os.path.exists(data_folder):
-            raise HTTPException(status_code=400, detail=f"Data folder '{data_folder}' does not exist.")
-        
-        Path(output_folder).mkdir(parents=True, exist_ok=True)
+    # Perform inference
+    with torch.no_grad():
+        results = model(input_tensor)
 
-        image_files = [f for f in os.listdir(data_folder) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+    # Process the model output (assuming the model returns bounding boxes and scores)
+    output = results.xyxy[0]  # Bounding boxes in [x1, y1, x2, y2, conf, class]
 
-        if len(image_files) < 50:
-            raise HTTPException(status_code=400, detail="Not enough images in the data folder. At least 50 images are required.")
+    # Extract data
+    boxes = output[:, :4]  # Bounding box coordinates
+    scores = output[:, 4]  # Confidence scores
+    labels = output[:, 5]  # Class labels
 
-        results_summary = []
+    # Filter predictions by confidence threshold (e.g., 0.5)
+    confidence_threshold = 0.01
+    valid_indices = torch.where(scores > confidence_threshold)[0]
 
-        for image_file in image_files:
-            file_path = os.path.join(data_folder, image_file)
+    predictions = []
+    for idx in valid_indices:
+        box = boxes[idx].tolist()  # Get the bounding box for this prediction
+        score = scores[idx].item()  # Confidence score
+        label = labels[idx].item()  # Class label
+        predictions.append({
+            "box": box,
+            "score": float(score),
+            "label": int(label)
+        })
 
-            image = cv2.imread(file_path)
-            if image is None:
-                logging.warning(f"Cannot read image file: {file_path}. Skipping.")
-                continue
-
-            results = model(image)
-
-            predictions = []
-            for box in results[0].boxes:  
-                bbox = box.xyxy[0].tolist()  
-                confidence = box.conf[0].item()  
-                label = model.names[int(box.cls[0])]  
-
-                predictions.append({
-                    "label": label,
-                    "confidence": confidence,
-                    "bbox": bbox
-                })
-
-            # Writing results to a .txt file
-            output_file = os.path.join(output_folder, f"{Path(image_file).stem}_predictions.txt")
-            with open(output_file, 'w') as txt_file:
-                for prediction in predictions:
-                    txt_file.write(f"Label: {prediction['label']}\n")
-                    txt_file.write(f"Confidence: {prediction['confidence']}\n")
-                    txt_file.write(f"Bounding Box: {prediction['bbox']}\n\n")
-
-            results_summary.append({
-                "file": image_file,
-                "predictions": predictions
-            })
-
-        return {"message": "Batch prediction completed successfully.", "results": results_summary}
-
-    except Exception as e:
-        logging.error(f"Error during batch prediction: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+    return {"predictions": predictions}
 
 if __name__ == "__main__":
-    import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=5000)
