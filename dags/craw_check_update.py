@@ -39,9 +39,9 @@ def crawl_tomato_images(output_folder="data_lake", num_images=100):
 
 # Function: Process images from data_lake
 def process_images_from_datalake():
-    image_folder = "/opt/airflow/data_lake"
+    image_folder = "/opt/airflow/data_lake/tomato"
     output_folder = "/opt/airflow/data_pool"
-    api_url = "http://localhost:5000/predict"
+    api_url = "http://0.0.0.0:5000/predict"
 
     if not os.path.exists(output_folder):
         os.makedirs(output_folder)
@@ -52,7 +52,7 @@ def process_images_from_datalake():
             with open(os.path.join(image_folder, img), 'rb') as file:
                 response = requests.post(api_url, files={'image': file})
                 labels = response.json()
-                with open(os.path.join(output_folder, f"{os.path.splitext(img)[0]}.json"), 'w') as label_file:
+                with open(os.path.join(output_folder, f"{os.path.splitext(img)[0]}.txt"), 'w') as label_file:
                     json.dump(labels, label_file)
 
 # Function: Train a new model

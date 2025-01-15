@@ -10,5 +10,3 @@ uvicorn
 gradio
 requests
 ultralytics
-torch
-

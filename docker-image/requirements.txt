@@ -1,7 +1,6 @@
-fastapi==0.95.0
-uvicorn==0.22.0
-torch==2.1.0
-pillow==9.4.0
-pydantic==1.10.4
-ultralytics==8.0.0
-aiofiles==0.8.0
+fastapi
+uvicorn
+opencv-python-headless
+ultralytics
+numpy
+pydantic

@@ -1,0 +1,30 @@
+[2025-01-15T04:50:40.776+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-15T04:50:40.795+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tomato_pipeline.train_model manual__2025-01-15T04:34:24.950427+00:00 [queued]>
+[2025-01-15T04:50:40.807+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tomato_pipeline.train_model manual__2025-01-15T04:34:24.950427+00:00 [queued]>
+[2025-01-15T04:50:40.807+0000] {taskinstance.py:2866} INFO - Starting attempt 2 of 3
+[2025-01-15T04:50:40.824+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): train_model> on 2025-01-15 04:34:24.950427+00:00
+[2025-01-15T04:50:40.833+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=346) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-15T04:50:40.835+0000] {standard_task_runner.py:72} INFO - Started process 348 to run task
+[2025-01-15T04:50:40.835+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tomato_pipeline', 'train_model', 'manual__2025-01-15T04:34:24.950427+00:00', '--job-id', '17', '--raw', '--subdir', 'DAGS_FOLDER/craw_check_update.py', '--cfg-path', '/tmp/tmp_49ko4_7']
+[2025-01-15T04:50:40.837+0000] {standard_task_runner.py:105} INFO - Job 17: Subtask train_model
+[2025-01-15T04:50:40.896+0000] {task_command.py:467} INFO - Running <TaskInstance: tomato_pipeline.train_model manual__2025-01-15T04:34:24.950427+00:00 [running]> on host 03b22c562543
+[2025-01-15T04:50:40.986+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tomato_pipeline' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-01-15T04:34:24.950427+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-01-15T04:34:24.950427+00:00'
+[2025-01-15T04:50:40.988+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-15T04:50:40.989+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-15T04:50:40.989+0000] {logging_mixin.py:190} INFO - Current task name:train_model state:running start_date:2025-01-15 04:50:40.796034+00:00
+[2025-01-15T04:50:40.990+0000] {logging_mixin.py:190} INFO - Dag name:tomato_pipeline and current dag run status:running
+[2025-01-15T04:50:40.991+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-15T04:50:40.993+0000] {craw_check_update.py:70} INFO - Bắt đầu huấn luyện mô hình mới...
+[2025-01-15T04:50:47.027+0000] {craw_check_update.py:97} ERROR - Lỗi khi huấn luyện mô hình: Command '['yolo', 'train', '--data', 'data/tomato.yaml', '--weights', '/opt/***/model/best.pt', '--epochs', '50', '--img-size', '640', '--project', 'experiments/2025-01-15_04-50-40', '--name', 'tomato_experiment']' returned non-zero exit status 1.
+[2025-01-15T04:50:47.028+0000] {python.py:240} INFO - Done. Returned value was: None
+[2025-01-15T04:50:47.040+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-01-15T04:50:47.041+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=tomato_pipeline, task_id=train_model, run_id=manual__2025-01-15T04:34:24.950427+00:00, execution_date=20250115T043424, start_date=20250115T045040, end_date=20250115T045047
+[2025-01-15T04:50:47.054+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2025-01-15T04:50:47.057+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2025-01-15T04:50:47.057+0000] {logging_mixin.py:190} INFO - Dag name:tomato_pipeline queued_at:2025-01-15 04:48:12.666284+00:00
+[2025-01-15T04:50:47.058+0000] {logging_mixin.py:190} INFO - Task hostname:03b22c562543 operator:PythonOperator
+[2025-01-15T04:50:47.086+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-01-15T04:50:47.108+0000] {taskinstance.py:3895} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-01-15T04:50:47.111+0000] {local_task_job_runner.py:245} INFO - ::endgroup::

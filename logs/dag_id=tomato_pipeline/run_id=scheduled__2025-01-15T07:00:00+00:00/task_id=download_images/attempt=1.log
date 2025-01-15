@@ -1,0 +1,189 @@
+[2025-01-15T08:43:05.088+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-01-15T08:43:05.110+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: tomato_pipeline.download_images scheduled__2025-01-15T07:00:00+00:00 [queued]>
+[2025-01-15T08:43:05.120+0000] {taskinstance.py:2613} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: tomato_pipeline.download_images scheduled__2025-01-15T07:00:00+00:00 [queued]>
+[2025-01-15T08:43:05.121+0000] {taskinstance.py:2866} INFO - Starting attempt 1 of 2
+[2025-01-15T08:43:05.139+0000] {taskinstance.py:2889} INFO - Executing <Task(PythonOperator): download_images> on 2025-01-15 07:00:00+00:00
+[2025-01-15T08:43:05.148+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=75) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-01-15T08:43:05.150+0000] {standard_task_runner.py:72} INFO - Started process 81 to run task
+[2025-01-15T08:43:05.150+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'tomato_pipeline', 'download_images', 'scheduled__2025-01-15T07:00:00+00:00', '--job-id', '32', '--raw', '--subdir', 'DAGS_FOLDER/craw_check_update.py', '--cfg-path', '/tmp/tmp9idbfybd']
+[2025-01-15T08:43:05.151+0000] {standard_task_runner.py:105} INFO - Job 32: Subtask download_images
+[2025-01-15T08:43:05.209+0000] {task_command.py:467} INFO - Running <TaskInstance: tomato_pipeline.download_images scheduled__2025-01-15T07:00:00+00:00 [running]> on host 03b22c562543
+[2025-01-15T08:43:05.306+0000] {taskinstance.py:3132} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='tomato_pipeline' AIRFLOW_CTX_TASK_ID='download_images' AIRFLOW_CTX_EXECUTION_DATE='2025-01-15T07:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-01-15T07:00:00+00:00'
+[2025-01-15T08:43:05.307+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2025-01-15T08:43:05.309+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2025-01-15T08:43:05.310+0000] {logging_mixin.py:190} INFO - Current task name:download_images state:running start_date:2025-01-15 08:43:05.111069+00:00
+[2025-01-15T08:43:05.311+0000] {logging_mixin.py:190} INFO - Dag name:tomato_pipeline and current dag run status:running
+[2025-01-15T08:43:05.311+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-01-15T08:43:05.313+0000] {craw_check_update.py:29} INFO - Đang tải 100 ảnh từ Bing với từ khóa: tomato...
+[2025-01-15T08:43:05.313+0000] {logging_mixin.py:190} INFO - [%] Downloading Images to /opt/***/data_lake/tomato
+[2025-01-15T08:43:05.314+0000] {logging_mixin.py:190} INFO - 
+
+[!!]Indexing page: 1
+[2025-01-15T08:43:05.978+0000] {logging_mixin.py:190} INFO - [%] Indexed 95 Images on Page 1.
+[2025-01-15T08:43:05.979+0000] {logging_mixin.py:190} INFO - 
+===============================================
+[2025-01-15T08:43:05.980+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #1 from https://creativenativefoods.com.au/wp-content/uploads/2020/05/Bush-Tomato-Whole.jpg
+[2025-01-15T08:43:10.041+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:10.042+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #2 from http://feelgrafix.com/data_images/out/27/956610-tomato.jpg
+[2025-01-15T08:43:10.686+0000] {logging_mixin.py:190} INFO - [!] Issue getting: http://feelgrafix.com/data_images/out/27/956610-tomato.jpg
+[!] Error:: HTTP Error 404: Not Found
+[2025-01-15T08:43:10.687+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #2 from https://static.vecteezy.com/system/resources/previews/019/782/597/original/tomato-illustration-element-png.png
+[2025-01-15T08:43:10.958+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:10.959+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #3 from https://static.vecteezy.com/system/resources/previews/018/931/605/original/cartoon-tomato-icon-png.png
+[2025-01-15T08:43:11.158+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:11.159+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #4 from https://static.vecteezy.com/system/resources/previews/024/063/019/original/cartoon-tomato-outline-png.png
+[2025-01-15T08:43:11.395+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:11.396+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #5 from https://upload.wikimedia.org/wikipedia/commons/8/88/Bright_red_tomato_and_cross_section02.jpg
+[2025-01-15T08:43:11.666+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:11.667+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #6 from https://www.tokyoweekender.com/wp-content/uploads/2022/08/Tomato.jpg
+[2025-01-15T08:43:12.053+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:12.054+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #7 from https://cdn.mos.cms.futurecdn.net/tAVzvxkxYFCMTMu7EbqfXP.jpg
+[2025-01-15T08:43:12.384+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:12.385+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #8 from https://sporked.com/wp-content/uploads/2022/11/BEST_TOMATO_JUICE_HEADER.jpg
+[2025-01-15T08:43:12.694+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:12.695+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #9 from https://www.tastingtable.com/img/gallery/when-to-use-tomato-paste-vs-tomato-puree/l-intro-1668094714.jpg
+[2025-01-15T08:43:13.214+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:13.215+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #10 from https://www.tomatodirt.com/images/most-popular-tomato-varieties.png
+[2025-01-15T08:43:13.672+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:13.673+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #11 from https://images.squarespace-cdn.com/content/v1/5fc3c6fcec917750a3e9b173/1620164674322-I0R11ILE0SAO0CEJGWM0/tomatoes.jpg
+[2025-01-15T08:43:14.155+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:14.156+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #12 from https://njaes.rutgers.edu/tomato-varieties/images/specialty-tomato-assortment.jpg
+[2025-01-15T08:43:16.488+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:16.489+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #13 from http://www.gardenisto.com/wp-content/uploads/2013/07/20130702_160451.jpg
+[2025-01-15T08:43:18.986+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:18.987+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #14 from https://i.pinimg.com/originals/93/01/e8/9301e86e03344eb615d34775c696cda7.jpg
+[2025-01-15T08:43:19.244+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:19.245+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #15 from http://wingardsmarket.com/wp-content/uploads/2015/06/heirloom-tomato.jpg
+[2025-01-15T08:43:20.677+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:20.678+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #16 from https://s-media-cache-ak0.pinimg.com/736x/a9/0d/b1/a90db1c89b58602dde59e069e8262ef4.jpg
+[2025-01-15T08:43:21.084+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:21.084+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #17 from https://www.gardeningknowhow.com/wp-content/uploads/2021/07/heap-of-colorful-and-various-tomatoes-1024x768.jpg
+[2025-01-15T08:43:23.470+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:23.470+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #18 from http://wholefedhomestead.com/wp-content/uploads/2014/02/Black-Cherry-Tomatoes.jpg
+[2025-01-15T08:43:26.334+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:26.335+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #19 from https://www.allotment-garden.org/wp-content/uploads/2016/04/Black-Opal-Tomatoes.jpg
+[2025-01-15T08:43:29.858+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:29.859+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #20 from https://kitchengardenbykatie.com/wp-content/uploads/2021/12/Heritage-Tomato-Varieties-scaled.jpg
+[2025-01-15T08:43:31.467+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://kitchengardenbykatie.com/wp-content/uploads/2021/12/Heritage-Tomato-Varieties-scaled.jpg
+[!] Error:: Remote end closed connection without response
+[2025-01-15T08:43:31.468+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #20 from https://i.pinimg.com/originals/0f/1c/a4/0f1ca4fbfbc364d84e91d51d34acf413.jpg
+[2025-01-15T08:43:31.702+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:31.704+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #21 from https://www.tomatobible.com/wp-content/uploads/2021/04/heirloom-tomato-variety.jpg
+[2025-01-15T08:43:32.344+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:32.345+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #22 from https://www.researchgate.net/publication/352501001/figure/fig1/AS:1038265649987584@1624553229153/Representative-fruits-of-the-10-varieties-of-pepper-P-codes-tomato-T-codes-and.png
+[2025-01-15T08:43:32.526+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://www.researchgate.net/publication/352501001/figure/fig1/AS:1038265649987584@1624553229153/Representative-fruits-of-the-10-varieties-of-pepper-P-codes-tomato-T-codes-and.png
+[!] Error:: HTTP Error 403: Forbidden
+[2025-01-15T08:43:32.527+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #22 from https://i.pinimg.com/736x/3a/d9/fd/3ad9fdc578374ac9b4d72278bbfa4d65.jpg
+[2025-01-15T08:43:32.642+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:32.643+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #23 from https://gardenerspath.com/wp-content/uploads/2019/12/Top-Tomato-Hybrids.jpg
+[2025-01-15T08:43:33.041+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:33.042+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #24 from https://i.pinimg.com/originals/3c/ae/55/3cae55ac3906bdca1830d26ba8a361df.jpg
+[2025-01-15T08:43:33.164+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:33.165+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #25 from https://www.kroger.com/content/v2/binary/image/blog/food/types-of-tomatoes-guide/imageset_types-of-tomatoes_03-02--640-x-1630_tomatoes_info-graphic_02-16_52.png
+[2025-01-15T08:43:33.512+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://www.kroger.com/content/v2/binary/image/blog/food/types-of-tomatoes-guide/imageset_types-of-tomatoes_03-02--640-x-1630_tomatoes_info-graphic_02-16_52.png
+[!] Error:: HTTP Error 403: Forbidden
+[2025-01-15T08:43:33.514+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #25 from https://i.pinimg.com/originals/a4/6a/2d/a46a2da475dcffbcebc0b4b3c18af10b.jpg
+[2025-01-15T08:43:33.652+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:33.653+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #26 from http://media-cache-ak0.pinimg.com/736x/e0/31/0e/e0310ef03045cd0c2a65b934bb7f66a9.jpg
+[2025-01-15T08:43:34.078+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:34.078+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #27 from https://modernfrontierswoman.com/wp-content/uploads/2018/04/Tomato-Growing-Tips.jpg
+[2025-01-15T08:43:34.508+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:34.510+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #28 from https://simplifylivelove.com/wp-content/uploads/2020/08/tomato-growing-tips-1.jpg
+[2025-01-15T08:43:34.868+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:34.869+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #29 from https://imaginacres.com/wp-content/uploads/2014/04/10-Tomato-Growing-Tips-Pinsm-1.jpg
+[2025-01-15T08:43:36.877+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:36.878+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #30 from https://simplifylivelove.com/wp-content/uploads/2020/08/19-best-tips-for-growing-tomatoes.jpg
+[2025-01-15T08:43:37.241+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:37.242+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #31 from https://simplifylivelove.com/wp-content/uploads/2023/02/19-Best-Tips-for-Growing-Tomatoes.jpg
+[2025-01-15T08:43:39.215+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:39.215+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #32 from https://www.thespruce.com/thmb/TMRYcJe21L7W5Rn2R8jDqIfVSCk=/5750x3829/filters:fill(auto,1)/top-tomato-growing-tips-1402587-11-c6d6161716fd448fbca41715bbffb1d9.jpg
+[2025-01-15T08:43:42.201+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:42.202+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #33 from https://petergreenfield.com/wp-content/uploads/2021/06/tomato-growing-tips-for-beginners-1024x576.png
+[2025-01-15T08:43:44.146+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:44.146+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #34 from https://www.thespruce.com/thmb/r2nrI4RmUzgalSX-zc2DFaXFMPU=/4700x3134/filters:no_upscale():max_bytes(150000):strip_icc()/top-tomato-growing-tips-1402587-01-a44a63731ea846c29dff2fa6a722fae5.jpg
+[2025-01-15T08:43:44.889+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:44.889+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #35 from https://blog.trekaroo.com/wp-content/uploads/2020/03/tomato-planting-tips-by-sharlene-earnshaw.jpg
+[2025-01-15T08:43:46.154+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:46.155+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #36 from https://www.thespruce.com/thmb/eQHG40jdBkK7Jv6gvokjdenCzLw=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/top-tomato-growing-tips-1402587-v4-5b4de02ac9e77c003ebbd6f7.png
+[2025-01-15T08:43:46.806+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:46.807+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #37 from https://www.thespruce.com/thmb/J91toAgjBJ_p4lonWjxDl3Rc3dY=/1600x1075/filters:no_upscale():max_bytes(150000):strip_icc()/Tomato-Seedlings_edited-1-57a0d1655f9b589aa9cba9ab.jpg
+[2025-01-15T08:43:47.466+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:47.467+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #38 from https://blog.trekaroo.com/wp-content/uploads/2020/03/Tomato-growing-tips-seedling-by-flickr-ged.jpg
+[2025-01-15T08:43:47.732+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:47.733+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #39 from https://gracegritsgarden.com/wp-content/uploads/2020/05/tomato-growing-tips.png
+[2025-01-15T08:43:48.187+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:48.187+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #40 from https://plantinstructions.com/wp-content/uploads/2017/08/Tomato-Growing-Tips.jpg
+[2025-01-15T08:43:48.303+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://plantinstructions.com/wp-content/uploads/2017/08/Tomato-Growing-Tips.jpg
+[!] Error:: <urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1000)>
+[2025-01-15T08:43:48.304+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #40 from https://theplantguide.net/wp-content/uploads/2017/10/Untitled.png
+[2025-01-15T08:43:50.618+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:50.619+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #41 from https://i.pinimg.com/originals/8c/d4/9b/8cd49b36640bc2d2097ea59988d606ab.jpg
+[2025-01-15T08:43:50.749+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:50.750+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #42 from https://momfoodie.com/wp-content/uploads/Tips-for-Growing-Tomatoes-1.webp
+[2025-01-15T08:43:52.660+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:52.661+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #43 from https://i.pinimg.com/originals/7f/94/ee/7f94ee5362c1c43d398c647981e320df.jpg
+[2025-01-15T08:43:52.784+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:52.784+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #44 from https://balconygardenweb.b-cdn.net/wp-content/uploads/2017/07/1.-Choose-an-ideal-location1.jpg
+[2025-01-15T08:43:53.571+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:53.571+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #45 from https://www.thespruce.com/thmb/bVnhYJgAMfZ3g3YEN4dIMNA_zos=/5600x3734/filters:no_upscale():max_bytes(150000):strip_icc()/tips-for-growing-tomatoes-in-containers-848216-01-bc0c62366c3b448f9b1f6cd0436a8270.jpg
+[2025-01-15T08:43:54.154+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:54.155+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #46 from https://cdn11.bigcommerce.com/s-jmzfi5zcr2/product_images/uploaded_images/cage-supporting-goodhearted-tomato-plant.jpg
+[2025-01-15T08:43:54.779+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:54.780+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #47 from https://minnetonkaorchards.com/wp-content/uploads/2022/06/Tomato-plant-520x347.jpg
+[2025-01-15T08:43:55.061+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:55.062+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #48 from https://cherryblossomlife.com/wp-content/uploads/2019/04/tomato-plant-care.jpg
+[2025-01-15T08:43:56.439+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:56.439+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #49 from http://growingtomatoes4you.com/wp-content/uploads/2011/12/Tomato-Plant-Care-01.jpg
+[2025-01-15T08:43:56.883+0000] {logging_mixin.py:190} INFO - [!] Issue getting: http://growingtomatoes4you.com/wp-content/uploads/2011/12/Tomato-Plant-Care-01.jpg
+[!] Error:: Remote end closed connection without response
+[2025-01-15T08:43:56.884+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #49 from http://cherryblossomlife.com/wp-content/uploads/2019/04/tomato-plant-care-1.jpg
+[2025-01-15T08:43:58.263+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:58.264+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #50 from https://grow.ifa.coop/hubfs/tomato-care-img3a.png
+[2025-01-15T08:43:59.203+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:59.204+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #51 from https://plantcaretoday.com/wp-content/uploads/8-tomato-growing-mistakes-pinterest-735-1120-01312018-min.jpg
+[2025-01-15T08:43:59.458+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:43:59.459+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #52 from https://growingtomatoes4you.com/wp-content/uploads/2011/12/growing-tomatoes-1.jpg
+[2025-01-15T08:44:00.286+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://growingtomatoes4you.com/wp-content/uploads/2011/12/growing-tomatoes-1.jpg
+[!] Error:: Remote end closed connection without response
+[2025-01-15T08:44:00.287+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #52 from https://cdn.images.express.co.uk/img/dynamic/13/1200x712/4756187.jpg?r=1684257293110
+[2025-01-15T08:44:00.831+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:00.832+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #53 from https://lh3.googleusercontent.com/-L6O7vJkqOOU/X9JLXKD6bPI/AAAAAAAACp8/I5MKqlHobtUgqclfrYgJj-joMQx1cJyxgCNcBGAsYHQ/w1684-h1069-p-k-no-nu/1607660454606226-0.png
+[2025-01-15T08:44:02.123+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:02.124+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #54 from https://i.pinimg.com/originals/21/ef/55/21ef553eb93f2ba793991d4145b82cee.jpg
+[2025-01-15T08:44:02.266+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:02.267+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #55 from https://cdn.images.express.co.uk/img/dynamic/13/590x/secondary/how-to-care-for-tomato-plant-3101357.jpg?r=1624544792894
+[2025-01-15T08:44:03.122+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:03.123+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #56 from http://s3.amazonaws.com/photography.prod.demandstudios.com/1567bbae-342b-482f-9f6e-d4788b0b0d84.jpg
+[2025-01-15T08:44:05.263+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:05.264+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #57 from https://c8.alamy.com/comp/2N56NNM/life-cycle-of-a-tomato-plant-diagram-illustration-2N56NNM.jpg
+[2025-01-15T08:44:05.654+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:05.655+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #58 from https://img.hunkercdn.com/640/photos.demandstudios.com/getty/article/181/88/470660733.jpg
+[2025-01-15T08:44:05.944+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:05.944+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #59 from https://plantcaretoday.com/wp-content/uploads/tomato-planting-10-rules-pinterest-735-1470-min.jpg
+[2025-01-15T08:44:06.192+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:06.192+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #60 from https://hort.extension.wisc.edu/files/2021/07/tomato-prune-1.png
+[2025-01-15T08:44:09.862+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:09.862+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #61 from https://cdn.shopify.com/s/files/1/1637/1845/files/Untitled_design_2_2b2910ef-ec92-4cab-8a24-b429ac9a4083.png?v=1624672830
+[2025-01-15T08:44:10.256+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:10.257+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #62 from https://i0.wp.com/plantora.app/blog/wp-content/uploads/2023/08/Tomato-Plants.jpg?w=813&amp;ssl=1
+[2025-01-15T08:44:10.493+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://i0.wp.com/plantora.app/blog/wp-content/uploads/2023/08/Tomato-Plants.jpg?w=813&amp;ssl=1
+[!] Error:: HTTP Error 404: Not Found
+[2025-01-15T08:44:10.494+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #62 from https://i2.wp.com/agnetwest.com/wp-content/uploads/2019/12/tomato-plant-pruning.shutterstock_211577689-scaled.jpg?fit=2560%2C1707
+[2025-01-15T08:44:10.706+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://i2.wp.com/agnetwest.com/wp-content/uploads/2019/12/tomato-plant-pruning.shutterstock_211577689-scaled.jpg?fit=2560%2C1707
+[!] Error:: HTTP Error 404: Not Found
+[2025-01-15T08:44:10.707+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #62 from https://minnetonkaorchards.com/wp-content/uploads/2022/08/BFS-1080x720.jpg
+[2025-01-15T08:44:11.013+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:11.014+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #63 from https://clipart-library.com/8300/1931/tomato-plant-with-fruit-isolated_1639-44286.jpg
+[2025-01-15T08:44:12.316+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:12.317+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #64 from https://familystylefood.com/wp-content/uploads/2022/09/Homemade-Tomato-Paste.jpg
+[2025-01-15T08:44:12.664+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:12.664+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #65 from https://www.southernliving.com/thmb/LrI8jw46B1jq1AThPtJmoC-IcEU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1368056090-f196e8f115434b14a726b350b0f773df.jpg
+[2025-01-15T08:44:13.966+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:13.967+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #66 from https://homesteadandchill.com/wp-content/uploads/2022/09/how-to-make-tomato-powder-dry-tomato-paste-feature.jpg
+[2025-01-15T08:44:14.510+0000] {logging_mixin.py:190} INFO - [%] File Downloaded !
+[2025-01-15T08:44:14.511+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #67 from https://www.evolvingtable.com/wp-content/uploads/2022/07/How-to-dice-a-tomato-11.jpg
+[2025-01-15T08:44:14.960+0000] {logging_mixin.py:190} INFO - [!] Issue getting: https://www.evolvingtable.com/wp-content/uploads/2022/07/How-to-dice-a-tomato-11.jpg
+[!] Error:: HTTP Error 403: Forbidden
+[2025-01-15T08:44:14.960+0000] {logging_mixin.py:190} INFO - [%] Downloading Image #67 from https://www.byrdie.com/thmb/kD6agAHbHCD9hHmaC-t8jolxtko=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Byr_TomatoGirl_LeadRecirc-3f22a1e1ce9b428f9f424e9001ff3365.jpg
